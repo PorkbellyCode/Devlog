@@ -1,25 +1,12 @@
 import { Card, CardContent, CardHeader} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="bg-card border-b p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Devlog</h1>
-          <nav className="flex items-center gap-4">
-            <ul className="flex space-x-2">
-              <li><Button variant="ghost" asChild><a href="#">Home</a></Button></li>
-              <li><Button variant="ghost" asChild><a href="#">About</a></Button></li>
-              <li><Button variant="ghost" asChild><a href="#">Posts</a></Button></li>
-              <li><Button variant="ghost" asChild><a href="#">Contact</a></Button></li>
-            </ul>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="container mx-auto flex-grow p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,5 +43,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+  
   );
 }
